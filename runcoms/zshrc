@@ -11,3 +11,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd
+bindkey -v
+
+. /home/gugah/.completionrc
+source /usr/share/nvm/init-nvm.sh
+. /home/gugah/.local/bin/z.sh
+
+alias vim=nvim
+export EDITOR=nvim
+
+export KOPS_STATE_STORE=s3://calamar-kubernetes
